@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "linked-in-posts"
+version = "0.1.0"
+description = "Supported code for my LinkedIn posts"
+authors = ["Benjamin Sorenson <benjamin.sorenson81@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
