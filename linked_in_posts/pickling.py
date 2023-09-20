@@ -1,6 +1,5 @@
 import pathlib
 import tempfile
-from os import path
 from typing import Callable, Self
 
 import fasttext
@@ -12,13 +11,13 @@ class PicklableFastText(FastText._FastText):  # type: ignore[no-any-unimported]
 
     @classmethod
     def from_pretrained(cls, model: FastText._FastText) -> Self:  # type: ignore[no-any-unimported]
-        self = cls()
+        self = cls.__new__(cls)
         self.__dict__.update(model.__dict__)
         return self
 
     @classmethod
     def load(cls, saved_model: bytes | str) -> Self:
-        if isinstance(saved_model, str) and path.exists(saved_model):
+        if isinstance(saved_model, str) and pathlib.Path(saved_model).exists():
             return cls.from_pretrained(fasttext.load_model(saved_model))
 
         if isinstance(saved_model, bytes):
