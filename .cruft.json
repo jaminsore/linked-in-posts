@@ -1,0 +1,24 @@
+{
+  "template": "git@github.com:fpgmaas/cookiecutter-poetry.git",
+  "commit": "49756a70c7e8ec87d219de4c0effdca75838bbfb",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author": "Benjamin Sorenson",
+      "email": "benjamin.sorenson81@gmail.com",
+      "author_github_handle": "jaminsore",
+      "project_name": "linked-in-posts",
+      "project_slug": "linked_in_posts",
+      "project_description": "Code used in my linked in posts",
+      "include_github_actions": "y",
+      "publish_to": "none",
+      "deptry": "y",
+      "mkdocs": "y",
+      "codecov": "y",
+      "dockerfile": "n",
+      "open_source_license": "GNU General Public License v3",
+      "_template": "git@github.com:fpgmaas/cookiecutter-poetry.git"
+    }
+  },
+  "directory": null
+}
