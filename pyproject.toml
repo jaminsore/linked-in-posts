@@ -20,11 +20,17 @@ deptry = "^0.12.0"
 mypy = "^1.5.1"
 pre-commit = "^3.4.0"
 tox = "^4.11.1"
+cruft = "^2.15.0"
+pytest-jupyter = "^0.7.0"
 
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.2"
 mkdocs-material = "^9.2.7"
 mkdocstrings = {extras = ["python"], version = "^0.23.0"}
+
+
+[tool.poetry.group.repl.dependencies]
+jupyter = "^1.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -36,7 +42,7 @@ target-version = ['py37']
 preview = true
 
 [tool.mypy]
-files = ["linked_in_posts"]
+files = ["linked_in_posts", "tests"]
 disallow_untyped_defs = "True"
 disallow_any_unimported = "True"
 no_implicit_optional = "True"
