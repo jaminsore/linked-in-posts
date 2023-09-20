@@ -13,7 +13,7 @@ def training_text() -> str:
 
 
 @pytest.fixture
-def fastext_model(training_text: str) -> FastText._FastText:  # type: ignore[no-any-unimported]
+def fasttext_model(training_text: str) -> FastText._FastText:  # type: ignore[no-any-unimported]
     with tempfile.TemporaryDirectory() as d:
         train_file = pathlib.Path(d) / "train.txt"
         train_file.write_text(training_text)
