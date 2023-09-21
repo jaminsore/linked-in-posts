@@ -25,3 +25,6 @@ def test_picklable_fasttext_is_picklable(fasttext_model: FastText._FastText) -> 
     assert from_file.words == picklable_model.words
     assert from_bytes.words == picklable_model.words
     assert picklable_model.words == fasttext_model.words
+
+    with pytest.raises(FileNotFoundError):
+        picklable_model.load("a/path/that/does/not/exist.bin")
