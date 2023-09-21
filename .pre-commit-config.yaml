@@ -10,7 +10,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: "v0.0.230"
+    rev: "v0.0.290"
     hooks:
       - id: ruff
 
@@ -18,3 +18,4 @@ repos:
     rev: "22.8.0"
     hooks:
       - id: black
+      - id: black-jupyter
