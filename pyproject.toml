@@ -121,3 +121,10 @@ source = ["linked_in_posts"]
 
 [tool.deptry]
 ignore_notebooks = true
+
+[tool.commitizen]
+version = "0.0.1"
+version_files = [
+    "pyproject.toml:^version"
+]
+tag_format = "v$version"
